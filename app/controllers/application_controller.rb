@@ -8,6 +8,6 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "starboy"
   end
    get '/' do
-    "This is working"
+    erb :index
   end
 end
