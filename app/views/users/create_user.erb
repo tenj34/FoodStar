@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-
-  <h1><b> Sign Up </b></h1>
-  <hr>
-  <form action="/signup" method="POST">
-  <input type="text" class="form-control input-sm chat-input" name="username" placeholder="Username:" />
-  </br>
-  <input type="email" class="form-control input-sm chat-input" name="email" placeholder="Email:">
-  </br>
-  <input type="password" class="form-control input-sm chat-input" name="password" placeholder="Password:">
-  </br>
-
-  <div class="wrapper">
-    <span class="group-btn">
-    <input type="submit" value="Sign Up" class="btn btn-primary btn-md">
-  </div>
+<link rel="stylesheet" type="text/css" href="/stylesheets/slform.css">
+<main>
+  <section class='login'>
+    <div class='login--wrap clearfix'>
+      <div class="row clearfix">
+        <div class="col col-6 login--l">
+          <div class="title"><span class='text'>Login</span></div>
+          <div class='login--body'>
+            <label>
+              <div class='label'>Email address</div>
+              <input type='text' placeholder='john@doe.com' required />
+            </label>
+            <label>
+              <div class='label'>Password</div>
+              <input type='password' placeholder='*********' required />
+            </label>
+            <div class='sbmt'>
+              <button class='sbmt--btn'>Login</button>
+            </div>
+          </div>
+  </section>
+</main>
 
 </html>
