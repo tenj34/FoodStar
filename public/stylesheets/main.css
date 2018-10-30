@@ -144,5 +144,6 @@ a.animated-button.victoria-four:hover:after {
 .container {
 margin: 0px 60px 50px 599px;
 padding: 10px;
-width: 490px;
+width: 80%;
+align:center;
 }
