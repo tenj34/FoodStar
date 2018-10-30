@@ -2,7 +2,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #222;
+  background-color: #353535;
 }
 
 :root {
@@ -13,7 +13,7 @@ html, body {
   box-sizing: border-box;
   font-family: "Roboto", Helvetica, sans-serif;
   font-size: 1em;
-  color: #888;
+  color: #fff;
   font-weight: 500;
 }
 
