@@ -12,6 +12,11 @@
 
 ActiveRecord::Schema.define(version: 2018_10_30_164626) do
 
+  create_table "reviews", force: :cascade do |t|
+    t.string "review"
+    t.integer "user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "email"
