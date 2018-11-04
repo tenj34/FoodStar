@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
   get '/new' do
-    erb :'items/new'
+    erb :'reviews/new'
   end
 end
