@@ -3,7 +3,9 @@
   <div class="nav">
     <div class="nav-header">
       <div class="nav-title">
-        Food Star
+        <% if flash.has?(:message) %>
+        <%= flash[:message] %>
+        <% end %>
       </div>
     </div>
     <div class="nav-btn">
