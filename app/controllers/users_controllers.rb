@@ -9,10 +9,18 @@ class UsersController < ApplicationController
 
   post '/signup' do
     user = User.new(params)
-    user.save
-    session[:user_id] = user.id
+    if user.save
+      session[:user_id] = user.id
 
-    flash[:message] = "Welcome #{user.username}"
+        flash[:message] = "Welcome #{user.username}!"
+
+        redirect "/reviews"
+    elsif !logged_in?
+
+        flash[:message] = "Your username, email, or password is missing. Please try again."
+
+        redirect '/signup'
+    end
 
     redirect "/reviews"
 
