@@ -2,7 +2,7 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/new_review.css">
   <h1> New Review</h1>
   <div class="products-form-popup">
-    <form action="includes/send_review_mail.php" method="post" _lpchecked="1">
+    <form action="/reviews" method="POST" name="review">
         <div class="pro-pop-input">
             <label>Review</label>
             <textarea name="review-text" id="review-text"></textarea>
@@ -10,8 +10,8 @@
         </div>
         <div id="buttons">
             <div class="pro-pop-btn">
-                <input type="button" name="submit-review" value="Submit Review">
-                <a href="#" class="no-thanks">No Thanks</a>
+                <input type="submit" value="Submit Review">
+                <a href="/" class="no-thanks">No Thanks</a>
             </div>
         </div>
     </form>
