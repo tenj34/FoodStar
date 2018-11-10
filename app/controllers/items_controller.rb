@@ -4,8 +4,7 @@ class ItemsController < ApplicationController
   end
 
   post '/reviews' do
-    if params["review"] !=""
-      @review = current_user.reviews.create(review: params[:review])
+    if params["item"] != ""
       redirect '/reviews'
     else
       redirect '/new'
