@@ -1,4 +1,4 @@
-class ReviewsController < ApplicationController
+class ItemsController < ApplicationController
   get '/new' do
     erb :'reviews/new'
   end
