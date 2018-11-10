@@ -12,22 +12,15 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
-    user = User.new(params)
-    if user.save
+    user = User.new(:username => params[:username], :password => params[:password], :email => params[:email])
+
+    if user.save && user.username!= "" && user.email!="" && user.password!=""
+      User.create(:username => params[:username], :password => params[:password], :email => params[:email])
       session[:user_id] = user.id
-
-        flash[:message] = "Welcome #{user.username}!"
-
         redirect "/reviews"
-    elsif !logged_in?
-
-        flash[:message] = "Your username, email, or password is missing. Please try again."
-
+      else
         redirect '/signup'
     end
-
-    redirect "/reviews"
-
   end
 
   get '/login' do
