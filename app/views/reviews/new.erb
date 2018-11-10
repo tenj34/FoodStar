@@ -2,15 +2,14 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/new_review.css">
   <h1> New Review</h1>
   <div class="products-form-popup">
-    <form action="/reviews" method="POST" name="review">
+    <form action="/reviews" method="POST">
         <div class="pro-pop-input">
             <label>Review</label>
-            <textarea name="review-text" id="review-text"></textarea>
-            <span class="error"></span>
+            <textarea name="item" id="item"></textarea>
         </div>
         <div id="buttons">
             <div class="pro-pop-btn">
-                <input type="submit" value="Submit Review">
+                <input id="item" type="submit" value="Submit Review">
                 <a href="/" class="no-thanks">No Thanks</a>
             </div>
         </div>
