@@ -1,13 +1,12 @@
 class ItemsController < ApplicationController
-  get '/new' do
-    erb :'reviews/new'
-  end
 
-  post '/reviews' do
-    if params["item"] != ""
-      redirect '/reviews'
+  get '/show' do
+    if logged_in?
+      @reviews  = Review.all
+      erb :'reviews/show'
     else
-      redirect '/new'
-    end
+      flash[:notice] = "Please log in first"
+      redirect to '/login'
+   end
   end
 end
