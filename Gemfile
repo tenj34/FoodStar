@@ -3,7 +3,7 @@
  # gem "rails"
  gem 'sinatra'
 gem 'sqlite3'
-gem 'activerecord', :require => "active_record"
+gem 'activerecord', '~> 4.2', '>= 4.2.6', :require => 'active_record'
 gem 'rake'
 gem 'shotgun'
 gem 'pry'
