@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     if user.save && user.username!= "" && user.email!="" && user.password!=""
       User.create(:username => params[:username], :password => params[:password], :email => params[:email])
       session[:user_id] = user.id
-        redirect "/reviews"
+        redirect "/show"
       else
         redirect '/signup'
     end
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
   end
 
   get '/reviews' do
-    erb :'users/reviews'
+    erb :'users/show'
   end
 
 end
