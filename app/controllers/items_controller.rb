@@ -18,4 +18,16 @@ class ItemsController < ApplicationController
     end
   end
 
+  post '/show' do
+    @review = current_user.reviews.build(params)
+
+    if @review.save
+      redirect to "reviews/#{@review.id}"
+    else
+      erb :'reviews/create_review'
+    end
+  end
+
+  
+
 end
