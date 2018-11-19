@@ -4,15 +4,11 @@ class UsersController < ApplicationController
   use Rack::Flash
 
   get '/signup' do
-    if !logged_in?
-      erb :'users/create_user'
-    else
-      redirect to '/show'
-    end
+      erb :'users/create_user'    
   end
 
   post '/signup' do
-    @user = User.new(username: params[:username], email: params[:email], password: params[:password])
+    @user = User.create(username: params[:username], email: params[:email], password: params[:password])
     if @user.save
       session[:user_id] = @user.id
       redirect to '/show'
